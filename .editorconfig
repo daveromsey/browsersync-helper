@@ -1,0 +1,8 @@
+# Set tab size for viewing files on Github.
+# https://stackoverflow.com/a/33831598/3059883
+# https://github.com/isaacs/github/issues/170#issuecomment-150489692
+root = true
+
+[*]
+indent_style = tab
+indent_size = 2
