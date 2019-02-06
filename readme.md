@@ -2,29 +2,34 @@
 
 Browsersync Helper is a WordPress plugin for developers who are using Browsersync in their project's build process. The plugin automatically inserts Browsersync's JavaScript snippet into the HTML of a WordPress site.
 
-The JavaScrtipt snippet allows Browsersync's proxy feature to work without adding the port to the URL, which can cause various issues on WordPress sites.
+The snippet allows Browsersync's proxy feature to work without adding the port to the URL, which can cause various issues on WordPress sites.
 
 Browsersync Helper can be configured to work for a theme, child theme, plugin, or mu-plugin. By default, it's configured to work for a theme (or child theme, if in use), but this can be changed by customizing the options.
 
 ## Prerequisites
 
-You'll need to have a WordPress website installed and have Browsersync installed and configured as part of your theme's or plugin's build process. Browsersync Helper has been tested with Gulp and Webpack based projects.
+You'll need to have a WordPress website installed and have Browsersync installed and configured as part of your theme's or plugin's build process. Browsersync Helper has been tested with [Gulp](https://gulpjs.com/) and [Webpack](https://webpack.js.org/) based projects.
+
+###Links
+
+- (Browsersync)[https://www.browsersync.io/]
+- (Browsersync Webpack Plugin)[https://www.npmjs.com/package/browser-sync-webpack-plugin]
 
 ## Installation
 
 1. Clone this repository inside your WordPress plugins directory or download and extract the zip.
 
-2. Activate the plugin.
+2. Log in to your WP installation, navigate to <i>Plugins</i>, and activate Browsersync Helper.
 
 3. Navigate to your project's directory and start the watch process so that Browsersync is watching for changes.
 
 4. Visit the front end of your WordPress site. You should see the following message in the browser's JS console:
 
 ```
-Browsersync Helper Notification: Snippet JS successfully loaded!`
+Browsersync Helper Notification: Snippet JS successfully loaded!
 ```
 
-You should see Browsersync's JS snippet in the DOM. E.g.:
+You should see Browsersync's JS snippet in the DOM.
 
 ```js
 <script id="__bs_script__">//<![CDATA[
@@ -33,18 +38,15 @@ You should see Browsersync's JS snippet in the DOM. E.g.:
 //]]></script>
 ```
 
-5. When you save changes to a file that is being watched (`.css`, `.scss`, `.js`, `.php`, etc. ), the site should reload automatically.
+5. When changes are saved to a file that's being watched (`.css`, `.scss`, `.js`, `.php`, etc. ), Browsersync should reload the browser automatically.
 
-Note that by default, the snippet will only be output on the front end, and the user needs to have the `administrator` capability. This behavior can be changed by [modifying the plugin's options]('modifying-default-plugin-options').
+Note that by default, the snippet will only be output on the front end, and the user needs to have the `administrator` capability. This behavior can be changed by [modifying the plugin's options]('#modifying-default-plugin-options').
 
 ## Browsersync Configuration Example
 
 Example of a Browsersync configuration object used in Webpack, Gulp, etc.:
 
 ```js
-/**
- *
- */
 {
 	logSnippet: true,
 	open: false,
