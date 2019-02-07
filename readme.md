@@ -33,8 +33,8 @@ You should see Browsersync's JS snippet in the DOM.
 
 ```js
 <script id="__bs_script__">//<![CDATA[
-	document.write(
-		"<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace( "HOST", location.hostname ));
+  document.write(
+    "<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace( "HOST", location.hostname ));
 //]]></script>
 ```
 
@@ -48,12 +48,12 @@ Example of a Browsersync configuration object used in Webpack, Gulp, etc.:
 
 ```js
 {
-	logSnippet: true,
-	open: false,
-	port: 3000,
-	notify: false,
-	ghostMode: false,
-	files: ["**/*.php"]
+  logSnippet: true,
+  open: false,
+  port: 3000,
+  notify: false,
+  ghostMode: false,
+  files: ["**/*.php"]
 }
 ```
 
@@ -70,55 +70,55 @@ This plugin has no UI, but the default options can be configured using the `brow
  */
 add_filter( 'browsersync_helper_options', 'prefix_browsersync_helper_options' );
 function prefix_browsersync_helper_options( $options ) {
-	/**
-	 * Use Browsersync in a plugin's directory.
-	 */
-	$options['project_abs_path'] = plugin_dir_path(__FILE__);
+  /**
+   * Use Browsersync in a plugin's directory.
+   */
+  $options['project_abs_path'] = plugin_dir_path(__FILE__);
 
-	/**
-	 * Use Browsersync in the active theme's directory (default behavior).
-	 * This will apply to a child theme if it is active.
-	 */
-	//$options['project_abs_path'] = get_stylesheet_directory();
+  /**
+   * Use Browsersync in the active theme's directory (default behavior).
+   * This will apply to a child theme if it is active.
+   */
+  //$options['project_abs_path'] = get_stylesheet_directory();
 
-	/**
-	 * Use Browsersync in the parent theme's directory.
-	 */
-	//$options['project_abs_path'] = get_template_directory();
+  /**
+   * Use Browsersync in the parent theme's directory.
+   */
+  //$options['project_abs_path'] = get_template_directory();
 
-	/**
-	 * Manually set the version by disabling the auto version feature
-	 * and specify the desired version number.
-	 */
-	$options['browsersync_auto_version'] = false; // Default: true. When true, overrides any manual version set.
-	$options['browsersync_version'] = '2.0.0'; // Default: false
+  /**
+   * Manually set the version by disabling the auto version feature
+   * and specify the desired version number.
+   */
+  $options['browsersync_auto_version'] = false; // Default: true. When true, overrides any manual version set.
+  $options['browsersync_version'] = '2.0.0'; // Default: false
 
-	/**
-	 * Where to display snippet. Possible values: array( 'frontend', 'admin' )
-	 * Default: array( 'frontend' )
-	 */
-	$options['snippet_locations'] = array( 'frontend', 'admin' );
+  /**
+   * Where to display snippet. Possible values: array( 'frontend', 'admin' )
+   * Default: array( 'frontend' )
+   */
+  $options['snippet_locations'] = array( 'frontend', 'admin' );
 
-	/**
-	 * Capability required for snippet to be displayed. Use false to require no capability.
-	 * Default: administrator
-	 */
-	$options['required_cap'] = 'editor';
+  /**
+   * Capability required for snippet to be displayed. Use false to require no capability.
+   * Default: administrator
+   */
+  $options['required_cap'] = 'editor';
 
-	/**
-	 * Browsersync port. This should be the same port configured for
-	 * Browsersync in the project's Webpack/Gulp config.
-	 * Default: 3000
-	 */
-	$options['port'] = '8080';
+  /**
+   * Browsersync port. This should be the same port configured for
+   * Browsersync in the project's Webpack/Gulp config.
+   * Default: 3000
+   */
+  $options['port'] = '8080';
 
-	/**
-	 * Show debug messages in JS console.
-	 * Default: true
-	 */
-	$options['debug'] = false;
+  /**
+   * Show debug messages in JS console.
+   * Default: true
+   */
+  $options['debug'] = false;
 
-	return $options;
+  return $options;
 }
 ```
 
@@ -136,8 +136,8 @@ If you'd like to modify the output of the snippet, the `browsersync_helper_snipp
  */
 add_filter( 'browsersync_helper_snippet_output', 'prefix_browsersync_helper_snippet_output', 10, 2 );
 function prefix_browsersync_helper_snippet_output( $snippet, $options ) {
-	// Add code to modify generated snippet or rebuild manually...
+  // Add code to modify generated snippet or rebuild manually...
 
-	return $snippet;
+  return $snippet;
 }
 ```
