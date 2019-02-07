@@ -10,18 +10,18 @@ Browsersync Helper can be configured to work for a theme, child theme, plugin, o
 
 You'll need to have a WordPress website installed and have Browsersync installed and configured as part of your theme's or plugin's build process. Browsersync Helper has been tested with [Gulp](https://gulpjs.com/) and [Webpack](https://webpack.js.org/) based projects.
 
-###Links
+### Links
 
-- (Browsersync)[https://www.browsersync.io/]
-- (Browsersync Webpack Plugin)[https://www.npmjs.com/package/browser-sync-webpack-plugin]
+- [Browsersync](https://www.browsersync.io/)
+- [Browsersync Webpack Plugin](https://www.npmjs.com/package/browser-sync-webpack-plugin)
 
 ## Installation
 
-1. Clone this repository inside your WordPress plugins directory or download and extract the zip.
+1. Clone this repository inside the WordPress plugins directory or download and extract the zip.
 
-2. Log in to your WP installation, navigate to <i>Plugins</i>, and activate Browsersync Helper.
+2. Log in to the WP installation, navigate to <i>Plugins</i>, and activate Browsersync Helper.
 
-3. Navigate to your project's directory and start the watch process so that Browsersync is watching for changes.
+3. Navigate to your project's directory and start the watch process so that Browsersync monitors for changes.
 
 4. Visit the front end of your WordPress site. You should see the following message in the browser's JS console:
 
