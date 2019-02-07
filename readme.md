@@ -4,7 +4,7 @@ Browsersync Helper is a WordPress plugin for developers who are using Browsersyn
 
 The snippet allows Browsersync's proxy feature to work without adding the port to the URL, which can cause various issues on WordPress sites.
 
-Browsersync Helper can be configured to work for a theme, child theme, plugin, or mu-plugin. By default, it's configured to work for a theme (or child theme, if in use), but this can be changed by customizing the options.
+Browsersync Helper can be configured to work with a theme (default) or plugin. This can be changed by [customizing the plugin's options](#modifying-default-plugin-options).
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ You'll need to have a WordPress website installed and have Browsersync installed
 Browsersync Helper Notification: Snippet JS successfully loaded!
 ```
 
-You should see Browsersync's JS snippet in the DOM.
+You should see Browsersync's JS snippet in the site's HTML:
 
 ```js
 <script id="__bs_script__">//<![CDATA[
@@ -40,7 +40,7 @@ You should see Browsersync's JS snippet in the DOM.
 
 5. When changes are saved to a file that's being watched (`.css`, `.scss`, `.js`, `.php`, etc. ), Browsersync should reload the browser automatically.
 
-Note that by default, the snippet will only be output on the front end, and the user needs to have the `administrator` capability. This behavior can be changed by [modifying the plugin's options]('#modifying-default-plugin-options').
+Note that by default, the snippet will only be output on the front end, and the user needs to have the `administrator` capability. This behavior can be changed by [modifying the plugin's options](#modifying-default-plugin-options).
 
 ## Browsersync Configuration Example
 
