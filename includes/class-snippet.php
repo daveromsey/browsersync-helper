@@ -43,7 +43,7 @@ class Snippet {
 	 * 
 	 * Initializes properties and wires up snippet and messages for display.
 	 * 
-	 * @since  0.1.0
+	 * @since  1.0.0
 	 * @param array $options User-provided options.
 	 * @return void
 	 */
@@ -98,7 +98,7 @@ class Snippet {
 	 * Creates and returns the single instance of the Snippet class.
 	 * @link https://carlalexander.ca/singletons-in-wordpress/
 	 * 
-	 * @since  0.1.0
+	 * @since  1.0.0
 	 * @return Snippet
 	 */
 	public static function instance_get() {
@@ -112,7 +112,7 @@ class Snippet {
 	/**
 	 * Wires up the snippet to be output.
 	 * 
-	 * @since  0.1.0
+	 * @since  1.0.0
 	 * @return void
 	 */
 	public function init() {
@@ -214,7 +214,7 @@ class Snippet {
 	/**
 	 * Sets the Browsersync version
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 * @return string|false
 	 */
 	private function browsersync_version_set() {
@@ -241,7 +241,7 @@ class Snippet {
 	 * Helper function used to detect the Browsersync version being used by
 	 * extracting it from the project's Browsersync's package.json file.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 * @return string|false on error
 	 */	
 	private function browsersync_version_get_from_json() {
@@ -295,7 +295,7 @@ class Snippet {
 	/**
 	 * Gets the protocol to use for snippet output.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 * @return string
 	 */
 	private function snippet_protocol() {
@@ -305,7 +305,7 @@ class Snippet {
 	/**
 	 * Gets the async attribute for the snippet output.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 * @return string|false
 	 */	
 	private function snippet_attrib_async() {
@@ -319,7 +319,7 @@ class Snippet {
 	/**
 	 * Checks if the user has sufficient capabilities to output the snippet.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 * @return bool
 	 */	
 	private function snippet_capability_check() {
@@ -349,7 +349,7 @@ class Snippet {
 	 * 	  	document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
 	 * 	 //]]></script>
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 * @return void
 	 */
 	public function snippet_output() {

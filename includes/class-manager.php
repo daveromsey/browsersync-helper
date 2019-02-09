@@ -2,7 +2,7 @@
 /**
  * Top-level class to handle all of Browsersync Helper's functionality.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @package Browsersync Helper
  * @subpackage Browsersync Helper/Manager
@@ -13,7 +13,7 @@ namespace BrowsersyncHelper;
 /**
  * Top-level class to handle all of Browsersync Helper's functionality.
  *
- * @since 0.1.0
+ * @since 1.0.0
  *
  * @package Browsersync Helper
  * @subpackage Browsersync Helper/Manager
@@ -36,7 +36,7 @@ class Manager {
 	/**
 	 * Loads all dependencies.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 */	
 	private function dependencies_load() {
 		require_once plugin_dir_path( __FILE__ ) . 'class-i18n.php';
@@ -46,7 +46,7 @@ class Manager {
 	/**
 	 * Sets up plugin for translation.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 */		
 	private function locale_set() {
 		add_action( 'plugins_loaded', [ new \BrowsersyncHelper\I18n(), 'textdomain_load' ] );
@@ -55,7 +55,7 @@ class Manager {
 	/**
 	 * Sets up snippet generation.
 	 * 
-	 * @since 0.1.0
+	 * @since 1.0.0
 	 */		
 	private function snippet_init() {
 		add_action( 'plugins_loaded', '\BrowsersyncHelper\Snippet::instance_get' );
