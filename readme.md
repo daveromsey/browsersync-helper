@@ -17,7 +17,7 @@ You'll need to have a WordPress website installed and have Browsersync installed
 
 ## Installation
 
-1. Clone this repository inside the WordPress plugins directory or download and extract the zip.
+1. Clone this repository inside the WordPress plugins `/browsersync-helper` directory or download and extract the zip to the same location.
 
 2. Log in to the WP installation, navigate to <i>Plugins</i>, and activate Browsersync Helper.
 
