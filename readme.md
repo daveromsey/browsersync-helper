@@ -2,7 +2,6 @@
 
 Browsersync Helper is a WordPress plugin for developers who are using Browsersync in their project's build process. The plugin automatically inserts Browsersync's JavaScript snippet into the HTML of a WordPress site.
 
-
 The snippet allows Browsersync's proxy feature to work without adding the port to the URL, which can cause various issues on WordPress sites.
 
 Browsersync Helper can be configured to work with a theme (default) or plugin. This can be changed by [customizing the plugin's options](#modifying-default-plugin-options).
